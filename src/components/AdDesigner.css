@@ -1,0 +1,10 @@
+.ad-light {
+    border: solid 2px #222;
+    box-shadow: 2px 2px 5px #8d918e;
+}
+
+.ad-dark {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 2px 2px 5px #8d918e;
+}
