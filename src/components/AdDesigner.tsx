@@ -7,7 +7,7 @@ import "./AdDesigner.css";
 function AdDesigner() {
     const [flavor, setFlavor] = useState("Strawberry");
     const [mode, setMode] = useState("-light");
-    const [fontSize, setFontSize] = useState(44);
+    const [fontSize, setFontSize] = useState(25);
 
     const handleChocolateButton = () => {
         setFlavor("Chocolate");
@@ -38,7 +38,7 @@ function AdDesigner() {
     }
     return (<div style={{marginLeft: '8px'}}>
             <h2 className="caveat-font">Ad Designer</h2>
-            <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', border: '2px solid black', width: "110px"}}>
+            <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', border: '2px solid black', width: "150px"}}>
                 <p>Vote For</p><h3 style={{fontSize: fontSize}}>{flavor}</h3>
             </div>
             <div>
@@ -54,7 +54,7 @@ function AdDesigner() {
             </div>
             <div>
                 <p>Font Size</p>
-                <div style={{display: 'flex', flexDirection: 'row', alignContent: 'top'}}>
+                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'baseline'}}>
                 <button onClick={handleDownButton}>Down</button>
                 <p>{fontSize}</p>
                 <button onClick={handleUpButton}>Up</button>
