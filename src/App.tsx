@@ -8,7 +8,7 @@ import Votes from './components/Votes';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header user="Marlee"/>
       <div className='content-container'>
         <AdDesigner />
         <Votes />
