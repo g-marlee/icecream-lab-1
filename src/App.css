@@ -3,6 +3,34 @@ h1,h2,h3,h4,h5 {
   font-family: 'Caveat', cursive;
 }
 
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+
 button {
+  height: 20px;
+  background-color: #0e3c7e;
+  border: none;
+  box-shadow: 1px;
+  border-radius: 3px;
   margin-left: 2px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+button:hover {
+  background-color: #1e60a9;
 }

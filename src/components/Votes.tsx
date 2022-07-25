@@ -39,19 +39,19 @@ function Votes() {
     }
 
     return (
-        <div>
-            <h1>Vote Here</h1>
+        <div style={{marginLeft: '8px', marginTop: '12px'}}>
+            <h2>Vote Here</h2>
             <div>
                 <button onClick={chocolateButtonHandler}>Chocolate</button>     
                 <button onClick={vanillaButtonHandler}>Vanilla</button>
                 <button onClick={strawberryButtonHandler}>Strawberry</button>
                 <p>{(chocolateVotes === 0 && vanillaVotes === 0 && strawberryVotes === 0 && 'No votes yet')}</p>
-                <p>{(chocolateVotes > 0 && `Chocolate: ${chocolateVotes}  %${chocolateAverage.toFixed(1)}`)}</p>
+                <p>{(chocolateVotes > 0 && `Chocolate: ${chocolateVotes}      %${chocolateAverage.toFixed(1)}`)}</p>
                 <div className="chocolate-bar" style={{width: `${chocolateAverage}%`}}></div>
-                <p>{(vanillaVotes > 0 && `Vanilla: ${vanillaVotes}  %${vanillaAverage.toFixed(1)}`)}</p>
+                <p>{(vanillaVotes > 0 && `Vanilla: ${vanillaVotes}      %${vanillaAverage.toFixed(1)}`)}</p>
                 <div className="vanilla-bar" style={{width: `${vanillaAverage}%`}}></div>
-                <p>{(strawberryVotes > 0 && `Strawberry: ${strawberryVotes}  %${strawberryAverage.toFixed(1)}`)}</p>
-                <div className="strawberry-bar" style={{width: `${strawberryAverage}%`}}></div>
+                <p>{(strawberryVotes > 0 && `Strawberry: ${strawberryVotes}      %${strawberryAverage.toFixed(1)}`)}</p>
+                <div className={strawberryVotes > 0 ? 'stawberry-bar' : ''} style={strawberryVotes > 0 ? `width: ${strawberryAverage}%` : ''}></div>
             </div>
         </div>
     )
