@@ -1,10 +1,30 @@
-.ad-light {
+.ad {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
     border: solid 2px #222;
+    width: 150px; 
+    height: 120px;
     box-shadow: 2px 2px 5px #8d918e;
 }
 
 .ad-dark {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
+    border: solid 2px #222;
+    width: 150px; 
+    height: 120px;
+    box-shadow: 2px 2px 5px #8d918e;
     background-color: #222;
     color: #fff;
+    box-shadow: 2px 2px 5px #8d918e;
+}
+
+
+.ad-light {
+    border: solid 2px #222;
     box-shadow: 2px 2px 5px #8d918e;
 }

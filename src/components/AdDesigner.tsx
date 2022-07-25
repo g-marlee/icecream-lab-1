@@ -2,7 +2,23 @@ import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState } from "react";
 import "./AdDesigner.css";
 
+interface Props {
+    flavor: String;
+    fontSize: number;
+    darkTheme: boolean;
+}
 
+function Ad({flavor, fontSize, darkTheme}: Props) {
+    return (
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div  className={"ad" + (darkTheme === true ? '-dark' : '')}>
+            <p>Vote For</p>
+            <h3 style={{fontSize: fontSize}}>{flavor}</h3>
+        </div>
+    </div>
+    )
+    
+}
 
 function AdDesigner() {
     const [flavor, setFlavor] = useState("Strawberry");
@@ -65,4 +81,4 @@ function AdDesigner() {
     )
 }
 
-export default AdDesigner;
+export {AdDesigner, Ad};
