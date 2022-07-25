@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <Header user="Marlee"/>
-      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginTop: '8px'}}>
+      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', marginTop: '10px'}}>
         <Ad flavor="Chocolate" fontSize={25} darkTheme={true}/>
-        <Ad flavor="Vanilla" fontSize={25} darkTheme={false}/>, 
+        <Ad flavor="Vanilla" fontSize={25} darkTheme={false}/> 
         <Ad flavor="Strawberry" fontSize={25} darkTheme={true}/>
       </div>
       

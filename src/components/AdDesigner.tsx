@@ -9,10 +9,10 @@ interface Props {
 
 function Ad({flavor, fontSize, darkTheme}: Props) {
     return (
-        <div  className={"ad" + (darkTheme === true ? '-dark' : '')}>
-            <p>Vote For</p>
-            <h3 style={{fontSize: fontSize}}>{flavor}</h3>
-        </div>
+            <div  className={"ad" + (darkTheme === true ? '-dark' : '')}>
+                <p>Vote For</p>
+                <h3 style={{fontSize: fontSize}}>{flavor}</h3>
+            </div>
     ) 
 }
 

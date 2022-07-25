@@ -17,6 +17,7 @@ p {
 }
 
 button {
+  font-family: sans-serif;
   height: 20px;
   background-color: #0e3c7e;
   border: none;
