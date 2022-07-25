@@ -38,7 +38,7 @@ function AdDesigner() {
     }
     return (<div style={{marginLeft: '8px'}}>
             <h2 className="caveat-font">Ad Designer</h2>
-            <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', border: '2px solid black', width: "150px"}}>
+            <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', border: '2px solid black', width: "150px", height: '120px'}}>
                 <p>Vote For</p><h3 style={{fontSize: fontSize}}>{flavor}</h3>
             </div>
             <div>
