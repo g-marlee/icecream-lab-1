@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Votes.css";
 
+
 function Votes() {
+
     const [chocolateVotes, setChocolateVotes] = useState(0);
     const [vanillaVotes, setVanillaVotes] = useState(0);
     const [strawberryVotes, setStrawberryVotes] = useState(0);
