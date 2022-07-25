@@ -22,7 +22,7 @@ function Ad({flavor, fontSize, darkTheme}: Props) {
 
 function AdDesigner() {
     const [flavor, setFlavor] = useState("Strawberry");
-    const [mode, setMode] = useState("-light");
+    const [mode, setMode] = useState(false);
     const [fontSize, setFontSize] = useState(25);
 
     const handleChocolateButton = () => {
@@ -38,11 +38,11 @@ function AdDesigner() {
     }
 
     const handleLightButton = () => {
-        setMode("-light");
+        setMode(false);
     }
     
     const handleDarkButton = () => {
-        setMode("-dark");
+        setMode(true);
     }
 
     const handleDownButton = () => {
@@ -54,9 +54,10 @@ function AdDesigner() {
     }
     return (<div style={{marginLeft: '8px'}}>
             <h2 className="caveat-font">Ad Designer</h2>
-            <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', border: '2px solid black', width: "150px", height: '120px'}}>
+            {/* <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center', border: '2px solid black', width: "150px", height: '120px'}}>
                 <p>Vote For</p><h3 style={{fontSize: fontSize}}>{flavor}</h3>
-            </div>
+            </div> */}
+            <Ad flavor={flavor} fontSize={fontSize} darkTheme={mode}/>
             <div>
                 <p>What to Support</p>
                 <button onClick={handleChocolateButton} disabled={flavor === "Chocolate"}>Chocolate</button>
@@ -65,8 +66,8 @@ function AdDesigner() {
             </div>
             <div>
                 <p>Color Theme</p>
-                <button onClick={handleLightButton} disabled={mode === "-light"}>Light</button>
-                <button onClick={handleDarkButton} disabled={mode === "-dark"}>Dark</button>
+                <button onClick={handleLightButton} disabled={mode === false}>Light</button>
+                <button onClick={handleDarkButton} disabled={mode === true}>Dark</button>
             </div>
             <div>
                 <p>Font Size</p>
