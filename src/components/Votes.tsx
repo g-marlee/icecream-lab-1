@@ -49,9 +49,9 @@ function Votes() {
                 <p>{(chocolateVotes > 0 && `Chocolate: ${chocolateVotes}      %${chocolateAverage.toFixed(1)}`)}</p>
                 <div className="chocolate-bar" style={{width: `${chocolateAverage}%`}}></div>
                 <p>{(vanillaVotes > 0 && `Vanilla: ${vanillaVotes}      %${vanillaAverage.toFixed(1)}`)}</p>
-                <div className="vanilla-bar" style={{width: `${vanillaAverage}%`}}></div>
+                <div className={(vanillaVotes > 0 ? "vanilla-bar" : "" )} style={{width: `${vanillaAverage}%`}}></div>
                 <p>{(strawberryVotes > 0 && `Strawberry: ${strawberryVotes}      %${strawberryAverage.toFixed(1)}`)}</p>
-                <div className={strawberryVotes > 0 ? 'stawberry-bar' : ''} style={strawberryVotes > 0 ? `width: ${strawberryAverage}%` : ''}></div>
+                <div className={strawberryVotes > 0 ? 'stawberry-bar' : ''} style={{width: `${strawberryAverage}%`}}></div>
             </div>
         </div>
     )
