@@ -7,6 +7,7 @@ import "./AdDesigner.css";
 function AdDesigner() {
     const [flavor, setFlavor] = useState("Strawberry");
     const [mode, setMode] = useState("-light");
+    const [fontSize, setFontSize] = useState(44);
 
     const handleChocolateButton = () => {
         setFlavor("Chocolate");
@@ -27,10 +28,18 @@ function AdDesigner() {
     const handleDarkButton = () => {
         setMode("-dark");
     }
+
+    const handleDownButton = () => {
+        setFontSize(prevSize => prevSize -= 1);
+    }
+
+    const handleUpButton = () => {
+        setFontSize(prevSize => prevSize += 1);
+    }
     return (<div style={{marginLeft: '8px'}}>
             <h2 className="caveat-font">Ad Designer</h2>
             <div className= {"ad" + mode} style={{display: 'flex', flexDirection: 'column', textAlign: 'center', border: '2px solid black', width: "110px"}}>
-                <p>Vote For</p><h3>{flavor}</h3>
+                <p>Vote For</p><h3 style={{fontSize: fontSize}}>{flavor}</h3>
             </div>
             <div>
                 <p>What to Support</p>
@@ -42,6 +51,14 @@ function AdDesigner() {
                 <p>Color Theme</p>
                 <button onClick={handleLightButton} disabled={mode === "-light"}>Light</button>
                 <button onClick={handleDarkButton} disabled={mode === "-dark"}>Dark</button>
+            </div>
+            <div>
+                <p>Font Size</p>
+                <div style={{display: 'flex', flexDirection: 'row', alignContent: 'top'}}>
+                <button onClick={handleDownButton}>Down</button>
+                <p>{fontSize}</p>
+                <button onClick={handleUpButton}>Up</button>
+                </div>
             </div>
         
         </div>

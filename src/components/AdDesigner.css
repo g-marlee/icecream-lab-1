@@ -8,3 +8,7 @@
     color: #fff;
     box-shadow: 2px 2px 5px #8d918e;
 }
+
+button {
+    height: 20px;
+}
