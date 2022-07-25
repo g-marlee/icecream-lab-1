@@ -47,8 +47,11 @@ function Votes() {
                 <button onClick={strawberryButtonHandler}>Strawberry</button>
                 <p>{(chocolateVotes === 0 && vanillaVotes === 0 && strawberryVotes === 0 && 'No votes yet')}</p>
                 <p>{(chocolateVotes > 0 && `Chocolate: ${chocolateVotes}  %${chocolateAverage.toFixed(1)}`)}</p>
+                <div className="chocolate-bar" style={{width: `${chocolateAverage}%`}}></div>
                 <p>{(vanillaVotes > 0 && `Vanilla: ${vanillaVotes}  %${vanillaAverage.toFixed(1)}`)}</p>
+                <div className="vanilla-bar" style={{width: `${vanillaAverage}%`}}></div>
                 <p>{(strawberryVotes > 0 && `Strawberry: ${strawberryVotes}  %${strawberryAverage.toFixed(1)}`)}</p>
+                <div className="strawberry-bar" style={{width: `${strawberryAverage}%`}}></div>
             </div>
         </div>
     )

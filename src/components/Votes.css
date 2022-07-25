@@ -1,0 +1,22 @@
+.chocolate-bar {
+    display: block;
+    background-color: #6b543d;
+    height: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.vanilla-bar {
+    display: block;
+    background-color: #fcf2e8;
+    border: solid 1px #6b543d;
+    height: 20px;
+    margin-top: 0px;
+}
+
+.strawberry-bar {
+    display: block;
+    background-color: #ffb1dc;
+    height: 20px;
+    margin-top: 0px;
+}
