@@ -34,3 +34,11 @@ button:disabled {
 button:hover {
   background-color: #1e60a9;
 }
+
+@media only screen and (min-width: 700px) {
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
